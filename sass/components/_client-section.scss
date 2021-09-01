@@ -1,0 +1,36 @@
+.company__lists {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-right: calc(-1 * 30px);
+}
+
+.company__logo {
+    width: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.company__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 210px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: border-color $primary-transition;
+    
+    &:hover,
+    &:focus {
+        border-color: $primary-color;
+    }
+}
+.company__icon {
+    fill: #AFB1B8;
+    transition: fill $primary-transition;
+   
+    .company__link:hover &,
+    .company__link:focus & {
+        fill: $primary-color;
+    }
+}

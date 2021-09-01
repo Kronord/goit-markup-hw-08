@@ -1,0 +1,191 @@
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity $primary-transition;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 609px;
+    background-color: $secondary-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: $secondary-color;
+    cursor: pointer;
+}
+
+.modal__svg {
+    transition: fill $primary-transition;
+    
+    .modal__button:hover &,
+    .modal__button:focus & {
+        fill: $primary-color;
+    }
+}
+
+
+.modal__title {
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+.modal__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.modal__input {
+    padding-left: 42px;
+    width: 370px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color $primary-transition;
+
+    .modal__field:focus-within > & {
+        outline: none;
+        border-color: $primary-color;
+    }
+}
+
+.modal__icon {
+    position: absolute;
+    top: 29px;
+    left: 12px;
+    transition: fill $primary-transition;
+
+    .modal__field:focus-within> & {
+        fill: $primary-color;
+    }
+}
+
+.modal__label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.modal__area {
+    padding: 12px 16px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    transition: border-color $primary-transition;
+    
+    .modal__field:focus-within > & {
+        outline: none;
+        border-color: $primary-color;
+    }
+    
+    &::placeholder {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.modal__btn {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    background-color: $primary-color;
+    color: $secondary-color;
+    transition: filter $primary-transition;
+    
+    &:hover,
+    &:focus {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+
+
+.modal__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.modal__link {
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 5px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $primary-color;
+}
+
+.modal__img {
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid #000;
+    border-radius: 2px;
+    transition: background-color $primary-transition,
+        background-image $primary-transition,
+        border-color $primary-transition;
+    
+    .modal__input--checked:checked+ & {
+        border-color: transparent;
+        background-color: $primary-color;
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+    }
+}

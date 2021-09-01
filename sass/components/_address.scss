@@ -1,0 +1,35 @@
+.address-box {
+    margin-bottom: 60px;
+}
+.address__street {
+    margin: 0 0 9px 0;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+}
+
+.address__item {
+    
+    margin-bottom: 9px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.address__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $address-color;
+    transition: color $primary-transition;
+    
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}

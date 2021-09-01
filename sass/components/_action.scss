@@ -1,0 +1,34 @@
+.action {
+    display: none;
+}
+.action__list {
+    
+}
+
+.action__item {
+    margin-right: $features-margin;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.action__thumb {
+    position: relative;
+}
+
+.action__label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 27px 0;
+    text-align: center;
+    background-color: $action-bcgrd-color;
+    margin: 0;
+}
+
+.action__subscribe {
+    margin: 0;
+}

@@ -1,0 +1,41 @@
+
+
+.features__list {
+    
+}
+
+.features__item {
+ margin-bottom: 30px;
+ 
+ &:last-child {
+     margin-bottom: 0;
+ }
+}
+
+.features__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $features-backgrd-color;
+}
+
+.features__name {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    color: $title-color;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.features__discribe {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
