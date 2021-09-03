@@ -22,6 +22,18 @@
         <div class="container">
             <nav class="nav-page">
                 <a href="#" lang="en" class="logo link"><span class="logo__style">Web</span>Studio</a>
+                <button 
+                    type="button"
+                    class="menu-button is-open"
+                    aria-expanded="false"
+                    aria-controls="menu-container"
+                    data-menu-button
+                >
+                    <svg class="menu-icon" width="40" height="40">
+                        <use href="./images/icons.svg#icon-menu" class="burger-icon"></use>
+                        <use href="./images/icons.svg#cross-icon" class="cross-icon"></use>
+                    </svg>
+                </button>
                 <ul class="nav-menu items">
                     <li class="nav-menu__list list"><a href="./index.html" class="nav-menu__link nav-menu__link--blue link">Студия</a></li>
                     <li class="nav-menu__list list"><a href="./portfolio.html" class="nav-menu__link link">Портфолио</a></li>
@@ -402,6 +414,7 @@
 
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

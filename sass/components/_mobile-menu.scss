@@ -1,0 +1,14 @@
+.menu-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.cross-icon {
+    display: none;
+}
+.menu-button.is-open .cross-icon {
+    display: block;
+}
+.menu-button.is-open .burger-icon {
+    display: none;
+}

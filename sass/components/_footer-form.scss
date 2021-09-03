@@ -28,7 +28,10 @@
 }
 
 .footer-form__btn {
-    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     width: 200px;
     height: 50px;
     border: none;

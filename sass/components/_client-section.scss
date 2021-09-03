@@ -2,19 +2,19 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(-1 * 30px);
-    margin-right: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
 }
 
 .company__logo {
-    width: calc(100% / 2 - 30px);
-    margin-right: 30px;
+    width: calc((100% - 2 * 30px) / 2);
+    margin-left: 30px;
     margin-top: 30px;
 }
 .company__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 210px;
+    // max-width: 210px;
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
