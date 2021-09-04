@@ -2,6 +2,7 @@
     border: none;
     background-color: transparent;
     padding: 0;
+    z-index: 999;
 }
 .cross-icon {
     display: none;
@@ -11,4 +12,37 @@
 }
 .menu-button.is-open .burger-icon {
     display: none;
+}
+.mobile-menu {
+    display: none;
+}
+.mobile-menu.is-open {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: $secondary-color;
+}
+.comunity {
+    display: flex;
+    flex-wrap: wrap;
+}
+.comunity__list {
+    margin-right: 10px;
+}
+.comunity__list::after {
+    content: '';
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    margin-left: 10px;
+}
+.comunity__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2px;
+    letter-spacing: 0.02em;
+    color: $primary-color;
 }

@@ -1,21 +1,22 @@
 .contacts {
-    display: none;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
 }
 
 .contacts__list {
-    margin-left: 50px;
-    
-    &:first-child {
-        margin-left: 0;
-    }
-}
-
+    margin-bottom: 32px;
+}   
+//     &:first-child {
+//         margin-left: 0;
+//     }
+// }
 
 .contacts__link {
     
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.1;
+    font-size: 24px;
+    line-height: 1.16;
     color: $primary-text-color;
     letter-spacing: 0.02em;
     transition: color $primary-transition;
@@ -24,10 +25,17 @@
     &:focus {
         color: $primary-color;
     }
+
+    &--blue {
+        font-size: 34px;
+        line-height: 40px;
+        color: $primary-color;
+    }
 }
 
 
 .contacts__icon {
+    display: none;
     margin-right: 10px;
     fill: currentColor;
 }
