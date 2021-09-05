@@ -1,8 +1,15 @@
 .action {
     display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 }
 .action__list {
-    
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .action__item {

@@ -34,6 +34,10 @@
         height: 609px;
         transform: translate(-50%, -50%);
     }
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
 }
 
 .backdrop.is-hidden .modal {
@@ -93,6 +97,10 @@
     .modal__field:focus-within > & {
         outline: none;
         border-color: $primary-color;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 448px;
     }
 }
 

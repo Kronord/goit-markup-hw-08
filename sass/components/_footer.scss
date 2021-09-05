@@ -4,5 +4,16 @@
 }
 
 .footer__box {
-    text-align: center;
+    @media screen and (max-width: 1200px) {
+        text-align: center;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media screen and (min-width: 1200px) {
+        justify-content: space-between;
+    }
 }

@@ -5,13 +5,21 @@ body {
         overflow: hidden;
     }
 }
-
+img {
+    max-width: 100%;
+}
 .container {
     margin: 0 auto;
     padding: 0px 15px;
 
     @media screen and (min-width: 480px) {
         width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
     }
 }
 
@@ -50,7 +58,6 @@ body {
 
 .image {
     display: block;
-    width: 450px;
 }
 
 .link {

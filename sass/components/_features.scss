@@ -1,15 +1,32 @@
-
-
+.features {
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 0;
+    }
+}
 .features__list {
-    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: calc(-1 * #{$features-margin});
+        margin-bottom: calc(-1 * #{$features-margin});
+    }
 }
 
 .features__item {
- margin-bottom: 30px;
+ margin-bottom: $features-margin;
  
- &:last-child {
-     margin-bottom: 0;
- }
+    @media screen and (max-width: 767px) {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 2 * #{$features-margin}) / 2);
+        margin-right: $features-margin;
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 4 * #{$features-margin}) / 4);
+    }
 }
 
 .features__box {

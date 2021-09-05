@@ -1,48 +1,66 @@
 .gallery-nav {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
-
-.gallery-nav__list {
+@media (max-width: 399px) {
+  .gallery-nav {
+    display: block;
+  }
+  .gallery-nav__list:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  .gallery-nav__list {
     margin-right: 8px;
-    
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
     &:last-child {
-        margin-right: 0;
+      margin-right: 0;
     }
 
-    &:nth-child(n + 4) {
-        margin-top: 15px;
+    &:not(:nth-child(n + 4)) {
+      margin-bottom: 15px;
     }
+  }
 }
+@media screen and (min-width: 768px) {
+  .gallery-nav__list {
+    margin-right: 8px;
 
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
 
 .gallery-nav__btn {
-    padding: 6px 22px;
-    cursor: pointer;
-    background-color: $btn-color;
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
-    border: none;
-    border-radius: 4px;
-    transition: box-shadow $primary-transition,
-        background-color $primary-transition,
-        color $primary-transition;
-        
-        &--focused {
-            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            background-color: $primary-color;
-            color: $secondary-color;
-        }
-        
-        &:hover,
-        &:focus {
-            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            background-color: $primary-color;
-            color: $secondary-color;
-        }
-}
+  padding: 6px 22px;
+  cursor: pointer;
+  background-color: $btn-color;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
+  transition: box-shadow $primary-transition,
+    background-color $primary-transition, color $primary-transition;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+}

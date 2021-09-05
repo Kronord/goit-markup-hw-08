@@ -6,8 +6,22 @@
         linear-gradient(rgba(47, 48, 58, 1),
             rgba(47, 48, 58, 1));
     background-repeat: no-repeat;
-    max-width: 1600px;
+    background-size: 1600px;
     background-position: center;
+
+    @media screen and (min-width: 1200px) {
+        padding: 200px 0;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & {
+            background-image: url('slider-1-3200@2x.jpg');
+            background-size: cover;
+        }
+    }
 }
 
 .page-title {
@@ -19,6 +33,12 @@
     color: $secondary-color;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+        max-width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
 .slider-btn {

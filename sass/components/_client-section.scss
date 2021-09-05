@@ -1,14 +1,21 @@
 .company__lists {
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1 * 30px);
-    margin-left: calc(-1 * 30px);
+    margin-top: calc(-1 * #{$features-margin});
+    margin-left: calc(-1 * #{$features-margin});
 }
 
 .company__logo {
-    width: calc((100% - 2 * 30px) / 2);
-    margin-left: 30px;
-    margin-top: 30px;
+    width: calc((100% - 2 * #{$features-margin}) / 2);
+    margin-left: #{$features-margin};
+    margin-top: #{$features-margin};
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 3 * #{$features-margin}) / 3);
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 6 * #{$features-margin}) / 6);
+    }
 }
 .company__link {
     display: flex;
