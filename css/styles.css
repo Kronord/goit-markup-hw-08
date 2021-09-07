@@ -8,7 +8,9 @@ body.modal-open {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container {
@@ -204,10 +206,11 @@ img {
   }
 }
 
+.nav-menu__link--blue {
+  color: #2196F3;
+}
+
 @media screen and (min-width: 768px) {
-  .nav-menu__link--blue {
-    color: #2196F3;
-  }
   .nav-menu__link--blue::after {
     position: absolute;
     display: block;
@@ -354,16 +357,43 @@ img {
   background-position: center;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767px) {
   .slider-section {
-    padding: 200px 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(0, 0, 0, 0.5))), url(../images/mobile/mobile-hero-480.jpg), -webkit-gradient(linear, left top, left bottom, from(#2f303a), to(#2f303a));
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.5)), url(../images/mobile/mobile-hero-480.jpg), linear-gradient(#2f303a, #2f303a);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .slider-section {
-    background-image: url("slider-1-3200@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(0, 0, 0, 0.5))), url(../images/mobile/mobile-hero-480.jpg), -webkit-gradient(linear, left top, left bottom, from(#2f303a), to(#2f303a));
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.5)), url(../images/mobile/mobile-hero-480.jpg), linear-gradient(#2f303a, #2f303a);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .slider-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(0, 0, 0, 0.5))), url(../images/tablet/tablet-hero-768.jpg), -webkit-gradient(linear, left top, left bottom, from(#2f303a), to(#2f303a));
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.5)), url(../images/tablet/tablet-hero-768.jpg), linear-gradient(#2f303a, #2f303a);
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .slider-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(0, 0, 0, 0.5))), url(../images/tablet/tablet-hero-1536@2x.jpg), -webkit-gradient(linear, left top, left bottom, from(#2f303a), to(#2f303a));
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.5)), url(../images/tablet/tablet-hero-1536@2x.jpg), linear-gradient(#2f303a, #2f303a);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .slider-section {
+    padding: 200px 0;
   }
 }
 
@@ -462,7 +492,6 @@ img {
 }
 
 .features__name {
-  text-align: center;
   margin: 0 0 10px 0;
   font-weight: 700;
   font-size: 14px;
@@ -470,6 +499,12 @@ img {
   color: #212121;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .features__name {
+    text-align: center;
+  }
 }
 
 .features__discribe {
@@ -1261,10 +1296,12 @@ img {
 
 .mobile-menu.is-open {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;

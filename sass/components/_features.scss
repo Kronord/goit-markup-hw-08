@@ -39,7 +39,9 @@
 }
 
 .features__name {
-    text-align: center;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
     margin: 0 0 10px 0;
     font-weight: 700;
     font-size: 14px;
