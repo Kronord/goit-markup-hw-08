@@ -484,6 +484,12 @@ img {
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .product__image {
+    height: 294px;
+  }
+}
+
 .product__overlay {
   padding: 63px 24px;
   position: absolute;
@@ -526,7 +532,7 @@ img {
 }
 
 .product__name {
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
   text-align: left;
   font-weight: bold;
   font-size: 18px;

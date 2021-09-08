@@ -45,6 +45,11 @@
     position: relative;
     overflow: hidden;
 }
+.product__image {
+    @media screen and (min-width: 768px) {
+        height: 294px;
+    }
+}
 
 .product__overlay {
     padding: 63px 24px;
@@ -81,7 +86,7 @@
 }
 
 .product__name {
-    margin-bottom: 4px;
+    margin:0 0 4px 0;
     text-align: left;
     font-weight: bold;
     font-size: 18px;
